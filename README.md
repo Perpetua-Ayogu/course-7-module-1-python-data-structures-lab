@@ -163,6 +163,19 @@ generator_expression = (n * 2 for n in number_list if n > 3)
 - **Apply generator expressions** for memory efficiency.
 - **Update README** to document functionality.
 
+## Completed Implementation
+
+The starter modules in `lib/` store student tuples, filter majors case-insensitively
+with a list comprehension, format and print records, and collect unique majors
+with a set comprehension. The actual filtering module is `lib/filters.py`.
+
+`lib.student_data.students_by_id` uses a dictionary comprehension for ID lookup:
+`students_by_id.get(101)` returns Alice's record; an unknown ID returns `None`.
+`student_generator(student_list, major)` returns a lazy generator expression
+matching the exact major, preserving input order without building a result list.
+
+Run all project tests from the repository root with `pipenv run pytest -v`.
+
 ## Conclusion
 
 By mastering **Sequences, List Comprehensions, Generator Expressions, Dictionaries, and Sets**, developers can:
