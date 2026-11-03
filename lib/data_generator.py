@@ -1,8 +1,12 @@
-# This module contains functions to lazily generate student data.
+# data_generator.py
 
 def student_generator(student_list, major):
     """
-    Generate student records filtered by major lazily for memory efficiency
+    Generate student records filtered by major lazily
     using a Python generator.
     """
-    pass
+    return (
+        student
+        for student in student_list
+        if student[2] == major
+    )
